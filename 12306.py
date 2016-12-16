@@ -1,3 +1,4 @@
+#!/usr/lib/python2.7
 # -*-coding:utf-8-*-
 '''命令行查看火车票
 Usage:12306 [-hgdztka] <from> <to> <date>
@@ -19,11 +20,11 @@ import requests
 from prettytable import PrettyTable
 from docopt import docopt
 from colorama import init, Fore
-
 from stations import stations
 
 
 init()
+
 
 def get_json(url):
     response = requests.get(url, verify=False)
